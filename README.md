@@ -22,8 +22,7 @@ __State space:__ the map has 10x10 = 100 distinct states. The start state is the
  
 　The o stands for the available cells.
  
- 
-
+　　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/world_map.png)
 
 __Actions:__ The agent can choose from up to 4 actions (left, right, up, down) to move around.
 
@@ -31,8 +30,6 @@ __Environment Dynamics:__ the map is deterministic, leading to the same new stat
 
 __Rewards:__ The agent receives +1 reward when it gets the treasure (the one that shows R 1.0), and -1 reward when it meets monsters (R -1.0 is shown for these). 
 The state with +1.0 reward is the goal state and resets the agent back to start.
-
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/world%20map.png)
 
 ## Algorithm
 
@@ -73,11 +70,11 @@ In summary, we will create a map with monsters, trees and a treasure, and then t
 ## Results
 (1) The reward map is shown as below. the 1 stands for the treasure, -1 stands for the monster and _ stands for the trees.
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/reward%20map.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/reward%20map.png)
 
 (2) We tested different parameters of the two policy. For the ε -greedy, ε =0.1, 0.2, 0.3, respectively. For Boltzmann exploration, temperature decreases to as the sequence of 2000, 1000, 100, 10, 1. 
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/Qlearning%20approach.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/Qlearning%20approach.png)
 
 As we can see, the larger the ε is, the more time and iterations the trainning approach needs. Because a larger ε means more random actions the agent will take to make sure the whole map is explored.
 
@@ -85,21 +82,21 @@ Meanwile, the higher of the temperature, the Boltzmann exploration takes more ti
 
 (3) After training, we provide a menu to observe different results.
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/menu.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/menu.png)
 
 For example,
 
 • with command q, the final q_table is stored in the data.csv which is in the same folder with the main.py. It is a 100x4 matrix, because the action has four choices and the map has 100 states. we can see part of the q_table in figure below.
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/q_table.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/q_table.png)
 
 • with command p, we can see the final route that the agent choose for the treasure. The left figure is the final route for the treasure in (5,5) and the right one is the final route for the treasure in (8,8)
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/final%20path-55.png) ![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/final%20path-88.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/final%20path-55.png) ![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/final%20path-88.png)
 
 • with command r, we can see the movement of the agent along with the route it chooses step by step. Figure below shows part of the movements, the * is moving toward the treasure.
 
-![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/walking%20approach.png)
+　![Alt text](https://github.com/yeah61/treasure-hunting/blob/main/images/walking%20approach.png)
 
 ## Acknowledgement
 
